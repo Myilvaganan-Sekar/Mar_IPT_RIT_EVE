@@ -1,0 +1,209 @@
+
+
+GIT - VCS[Version Control Tool]
+
+GitHub - Web Hosting device
+
+Main - Repo
+
+Centralized Version Control Tool:
+
+Working Directory ---> staging ---> Local Repository--->
+Remote repository
+Target Branch ---> main
+Own Branch - > 12QA001
+
+12QA002---> get the latest from main branch --> git pull
+
+Pull Request will be raised
+
+git clone --> Download the project related folders and files
+from remote repo
+
+Comment prompt:
+Exisiting Repo: 
+git clone  <Exisiting Repo URL>
+
+New FrameWork and repo Creation:
+
+Pre- condition: Git, GitHub
+Google --> git download --> .exe will be downloaded -->
+double click --> next --> finish
+
+Window Search --> cmd --> enter -->
+Comment : git --version
+
+
+Google ---> search for --> github---> Create an account and login
+
+Step: Create an Remote Repo
+
+After login ---> Click the create repo or new button
+Enter the project name and description
+Click the "Create repo" button
+Find the repo --> Https link below
+Repo: https://github.com/Myilvaganan-Sekar/MAR_RIT_IPT.git
+
+Step 2: Working Directory [********************]
+Go to the folder location through the cmd prompt
+
+Step 3: Create an local Repo
+Comment: git init
+
+Empty repo will be created
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git init
+Initialized empty Git repository in C:/Users/myilvaganan.sekar.SUTRIXMEDIA1/Desktop/RITIPTProject/.git/
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Packages/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Step 4:Move the code from working directory to staging
+
+To move single file
+comment: git add fileName.format
+
+To move all the files
+Comment: git add .
+
+**********************
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Packages/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git add .
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Packages/GitNotes.txt
+*********************************************************
+Step 5: Move from staging to local Repository
+[FTR ---> git global --config user.name "<User>"
+git global config user.email "<email>"
+]
+Comment: git commit -m "Message realted to current changes"
+
+Message TC001.1
+commit ID: 0125
+		
+Message TC001.2
+commit ID: 0126
+
+Message TC001.3
+commit ID:
+
+Message TC001.4
+commit ID:
+
+
+Move the head: to 0125
+Remove the 0126-->
+
+Add Remaining ID's
+
+**************************
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git commit -m "Skeleton of framework"
+[master (root-commit) 8135e9f] Skeleton of framework
+ 1 file changed, 104 insertions(+)
+ create mode 100644 Packages/GitNotes.txt
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>
+*******************************************
+
+Step 6:Local repo to Remote Repo
+
+  Comment: git remote add origin https://github.com/Myilvaganan-Sekar/MAR_RIT_IPT.git
+ 
+NOte: Keep the branch name same in both the repo [master to main]
+  Comment : git branch -M main
+ 
+ C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git remote add origin https://github.com/Myilvaganan-Sekar/MAR_RIT_IPT.git
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git branch -M main
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject>git status
+On branch main
+nothing to commit, working tree clean
+
+C:\Users\myilvaganan.sekar.SUTRIXMEDIA1\Desktop\RITIPTProject> 
+
+*************************************************
+Comment: git push -u origin main
+
+Code will be reflected in Remote repo
+
+******************************************
+
+Day to Day Acivity:
+
+Clone the current Repo
+
+2.Create new branch:
+Go to git hub repo --> inside the current repo --< new branch -->
+Enter branch name
+on branch main
+Cmd : git pull   [Latest code from remote]
+
+Switch from main to your branch[12QA001]
+
+git checkout "12QA001"
+
+
+To get the latest from main branch --> switch to main branch
+  git checkout main
+  
+Comment: git pull
+
+
+To write you automation script:
+git checkout 12QA001
+
+Now you can write your auotmation code
+
+1.git status
+2.git add .
+3.git commit -m "Message"
+4.git push  
+  
+
+--> Raise a Pull Request
+
+Go to UI of remote repo --> Click [pull request] link -->
+select the branch --> provide the information with execution report
+--> click [Pull request] button
+
+Merge conflict:
+<<<<<<<<
+line of code
+>>>>>>>>>
+existing line of code
